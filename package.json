@@ -1,0 +1,17 @@
+{
+  "name": "multiplayertest",
+  "version": "1.0.0",
+  "description": "i am testing multiplayer",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "idk",
+    "start": "node server.js"
+  },
+  "author": "kennah co",
+  "license": "ISC"
+}

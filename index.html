@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>A Multiplayer Game</title>
+    <style>
+      .overlay {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+      }
+      #game-full {
+        background-color: aquamarine;
+        visibility: hidden;
+      }
+      #lobby {
+        background-color: plum;
+        visibility: visible;
+      }
+      #game-interrupt {
+        background-color: papayawhip;
+        visibility: hidden;
+      }
+    </style>
+    <link rel="shortcut icon" href="">
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body onload="initPage()">
+    <div id="game-full" class="overlay">
+      The lobby is full, try again later!
+    </div>
+    <div id="game-interrupt" class="overlay">
+      The game is already in progress, sorry!
+    </div>
+    <div id="lobby" class="overlay">
+      <p id="welcome">Welcome to Settlers of Catan</p>
+      <p id="pNameDisplay"></p>
+      <form name="pNameForm">
+        Enter a player name <input id="pNameInput" type = text Name="pName" placeholder = "ex: LongestRoad2009" size="20" OnChange="playerName(document.pNameForm.pName.value)">
+      </form>
+      <p id="pQTxt"><span id="pQuantity">1</span>/4 players in lobby</p>
+      <button type = button onclick = "chooseColour(1)">Red</button>
+      <button type = button onclick = "chooseColour(2)">White</button>
+      <button type = button onclick = "chooseColour(3)">Green</button>
+      <button type = button onclick = "chooseColour(4)">Blue</button>
+      <p id="pColourTxt">No colour chosen yet</p>
+      <div id="pList-Wrapper">
+        <ul id="pList">
+        </ul>
+      </div>
+      <button id = "readyButton" type = button onclick = "ready()">Ready</button>
+    </div>
+    PRETEND A GAME IS HERE!!
+  </body>
+  <script src="/static/game.js"></script>
+</html>
